@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{CCD1886F-B3D4-4C84-8ADE-7352EFB5A045}</ProjectGuid>
+    <ProjectGuid>{5F8376B1-7303-4B09-AC74-3DCF7217CA15}</ProjectGuid>
     <OutputType>Library</OutputType>
     <RootNamespace>kumasuzu.UITests</RootNamespace>
     <AssemblyName>kumasuzu.UITests</AssemblyName>
@@ -35,13 +35,13 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\iOS\kumasuzu.iOS.csproj">
-      <Project>{D10D4EE0-EE35-46A3-880D-C85D859F85CC}</Project>
+      <Project>{A2593F2E-0A61-4D5A-8619-6D4C945686CC}</Project>
       <Name>kumasuzu.iOS</Name>
       <ReferenceOutputAssembly>False</ReferenceOutputAssembly>
       <Private>False</Private>
     </ProjectReference>
     <ProjectReference Include="..\Droid\kumasuzu.Droid.csproj">
-      <Project>{4AB85809-F208-498C-83D7-5DA767729D1C}</Project>
+      <Project>{96311ED7-56A6-4AA9-9297-DC08B7BF697D}</Project>
       <Name>kumasuzu.Droid</Name>
       <ReferenceOutputAssembly>False</ReferenceOutputAssembly>
       <Private>False</Private>

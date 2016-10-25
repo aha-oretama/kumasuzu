@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{4AB85809-F208-498C-83D7-5DA767729D1C}</ProjectGuid>
+    <ProjectGuid>{96311ED7-56A6-4AA9-9297-DC08B7BF697D}</ProjectGuid>
     <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <RootNamespace>kumasuzu.Droid</RootNamespace>
@@ -84,7 +84,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\kumasuzu\kumasuzu.csproj">
-      <Project>{399A1086-AA2B-4357-97C6-BB8FBEF64064}</Project>
+      <Project>{59592027-4B5A-4C6C-B73D-B196ED0DBCBC}</Project>
       <Name>kumasuzu</Name>
     </ProjectReference>
   </ItemGroup>

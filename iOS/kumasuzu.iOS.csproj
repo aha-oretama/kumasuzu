@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
-    <ProjectGuid>{D10D4EE0-EE35-46A3-880D-C85D859F85CC}</ProjectGuid>
+    <ProjectGuid>{A2593F2E-0A61-4D5A-8619-6D4C945686CC}</ProjectGuid>
     <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Exe</OutputType>
     <RootNamespace>kumasuzu.iOS</RootNamespace>
@@ -106,7 +106,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\kumasuzu\kumasuzu.csproj">
-      <Project>{399A1086-AA2B-4357-97C6-BB8FBEF64064}</Project>
+      <Project>{59592027-4B5A-4C6C-B73D-B196ED0DBCBC}</Project>
       <Name>kumasuzu</Name>
     </ProjectReference>
   </ItemGroup>
