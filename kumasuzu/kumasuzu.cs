@@ -4,10 +4,26 @@ using Xamarin.Forms;
 
 namespace kumasuzu
 {
+
 	public class App : Application
 	{
+
+		private static string START = "Start!";
+		private static string STOP = "Stop!";
+
 		public App()
 		{
+
+			var button = new Button
+			{
+				Text = START
+			};
+
+			button.Clicked += (sender, e) =>
+			{
+				button.Text = button.Text == START ? STOP : START;
+			};
+
 			// The root page of your application
 			var content = new ContentPage
 			{
@@ -19,7 +35,8 @@ namespace kumasuzu
 						new Label {
 							HorizontalTextAlignment = TextAlignment.Center,
 							Text = "Welcome to Xamarin Forms!"
-						}
+						},
+						button
 					}
 				}
 			};
