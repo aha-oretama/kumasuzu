@@ -24,6 +24,8 @@ namespace kumasuzu
 				button.Text = button.Text == START ? STOP : START;
 			};
 
+
+
 			// The root page of your application
 			var content = new ContentPage
 			{
