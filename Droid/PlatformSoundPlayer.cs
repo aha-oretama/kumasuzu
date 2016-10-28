@@ -13,7 +13,8 @@ namespace kumasuzu.Droid
 
 		public PlatformSoundPlayer(String uri)
 		{
-			mediaPlayer = MediaPlayer.Create(this, Resource.Raw.sei_ge_suzu02).Start();
+			mediaPlayer = new MediaPlayer();
+			mediaPlayer.SetDataSource("Sounds/sei_ge_suzu02.mp3");
 			mediaPlayer.Prepare();
 		}
 
