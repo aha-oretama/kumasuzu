@@ -11,8 +11,10 @@ namespace kumasuzu
 		private static string START = "Start!";
 		private static string STOP = "Stop!";
 
+
 		public App()
 		{
+			var soundPlayer = DependencyService.Get<IPlatformSoundPlayer>();
 
 			var button = new Button
 			{
@@ -21,6 +23,7 @@ namespace kumasuzu
 
 			button.Clicked += (sender, e) =>
 			{
+				soundPlayer.playSound();
 				button.Text = button.Text == START ? STOP : START;
 			};
 
