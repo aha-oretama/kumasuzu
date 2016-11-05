@@ -11,7 +11,6 @@ namespace kumasuzu
 		private static string START = "Start!";
 		private static string STOP = "Stop!";
 
-
 		public App()
 		{
 			var soundPlayer = DependencyService.Get<IPlatformSoundPlayer>();
@@ -26,8 +25,6 @@ namespace kumasuzu
 				soundPlayer.playSound();
 				button.Text = button.Text == START ? STOP : START;
 			};
-
-
 
 			// The root page of your application
 			var content = new ContentPage
