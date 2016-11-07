@@ -31,6 +31,7 @@
     <Compile Include="kumasuzu.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="IPlatformSoundPlayer.cs" />
+    <Compile Include="Timer.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Xamarin.Forms.Core">
