@@ -21,6 +21,8 @@ namespace kumasuzu
 
 			var image = new Image
 			{
+				VerticalOptions = LayoutOptions.Center,
+				HeightRequest = 150,
 				Aspect = Aspect.AspectFit,
 				Source = ImageSource.FromResource(START_IMAGE_PATH)
 			};
@@ -58,7 +60,7 @@ namespace kumasuzu
 			// The root page of your application
 			var content = new ContentPage
 			{
-				Title = "クマ鈴",
+				Title = "くますず",
 				Content = new StackLayout
 				{
 					VerticalOptions = LayoutOptions.Center,

@@ -25,16 +25,19 @@
       "idiom": "iphone"
     },
     {
+      "filename": "Icon-60@2x.png",
       "size": "40x40",
       "scale": "3x",
       "idiom": "iphone"
     },
     {
+      "filename": "Icon.png",
       "size": "57x57",
       "scale": "1x",
       "idiom": "iphone"
     },
     {
+      "filename": "Icon@2x.png",
       "size": "57x57",
       "scale": "2x",
       "idiom": "iphone"
@@ -76,11 +79,13 @@
       "idiom": "ipad"
     },
     {
+      "filename": "Icon-Small-50.png",
       "size": "50x50",
       "scale": "1x",
       "idiom": "ipad"
     },
     {
+      "filename": "Icon-Small-50@2x.png",
       "size": "50x50",
       "scale": "2x",
       "idiom": "ipad"
@@ -91,21 +96,25 @@
       "idiom": "ipad"
     },
     {
+      "filename": "Icon-72.png",
       "size": "72x72",
       "scale": "1x",
       "idiom": "ipad"
     },
     {
+      "filename": "Icon-72@2x.png",
       "size": "72x72",
       "scale": "2x",
       "idiom": "ipad"
     },
     {
+      "filename": "Icon-76.png",
       "size": "76x76",
       "scale": "1x",
       "idiom": "ipad"
     },
     {
+      "filename": "Icon-76@2x.png",
       "size": "76x76",
       "scale": "2x",
       "idiom": "ipad"
@@ -119,6 +128,7 @@
     },
     {
       "role": "notificationCenter",
+      "filename": "AppIcon27.5x27.5@2x.png",
       "size": "27.5x27.5",
       "subtype": "42mm",
       "scale": "2x",
@@ -126,6 +136,7 @@
     },
     {
       "role": "companionSettings",
+      "filename": "Icon-Small@2x.png",
       "size": "29x29",
       "scale": "2x",
       "idiom": "watch"
@@ -138,6 +149,7 @@
     },
     {
       "role": "appLauncher",
+      "filename": "AppIcon40x40@2x.png",
       "size": "40x40",
       "subtype": "38mm",
       "scale": "2x",
@@ -145,6 +157,7 @@
     },
     {
       "role": "longLook",
+      "filename": "AppIcon44x44@2x.png",
       "size": "44x44",
       "subtype": "42mm",
       "scale": "2x",
@@ -152,6 +165,7 @@
     },
     {
       "role": "quickLook",
+      "filename": "AppIcon86x86@2x.png",
       "size": "86x86",
       "subtype": "38mm",
       "scale": "2x",
@@ -159,6 +173,7 @@
     },
     {
       "role": "quickLook",
+      "filename": "AppIcon98x98@2x.png",
       "size": "98x98",
       "subtype": "42mm",
       "scale": "2x",
