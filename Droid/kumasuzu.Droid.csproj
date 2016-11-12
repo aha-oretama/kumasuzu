@@ -84,7 +84,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\kumasuzu\kumasuzu.csproj">
-      <Project>{3E3B096D-D6DD-4481-9B99-A52A093FDFA5}</Project>
+      <Project>{59592027-4B5A-4C6C-B73D-B196ED0DBCBC}</Project>
       <Name>kumasuzu</Name>
     </ProjectReference>
   </ItemGroup>
@@ -104,11 +104,11 @@
     <AndroidResource Include="Resources\layout\Tabbar.axml" />
     <AndroidResource Include="Resources\layout\Toolbar.axml" />
     <AndroidResource Include="Resources\values\styles.xml" />
+    <AndroidResource Include="Resources\raw\sei_ge_suzu02.mp3" />
     <AndroidResource Include="Resources\drawable\icon.png" />
     <AndroidResource Include="Resources\drawable-hdpi\icon.png" />
     <AndroidResource Include="Resources\drawable-xhdpi\icon.png" />
     <AndroidResource Include="Resources\drawable-xxhdpi\icon.png" />
-    <AndroidResource Include="Resources\raw\sei_ge_suzu02.mp3" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\raw\" />
