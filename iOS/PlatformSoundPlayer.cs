@@ -16,7 +16,7 @@ namespace kumasuzu.iOS
 
 		public PlatformSoundPlayer()
 		{
-			url = NSUrl.FromFilename("Sounds/sei_ge_suzu02.mp3");
+			url = NSUrl.FromFilename("Sounds/suzu.mp3");
 			systemSound = new SystemSound(url);
 		}
 

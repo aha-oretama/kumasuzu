@@ -2938,7 +2938,7 @@ namespace kumasuzu.Droid
 		{
 			
 			// aapt resource value: 0x7f060000
-			public const int sei_ge_suzu02 = 2131099648;
+			public const int suzu = 2131099648;
 			
 			static Raw()
 			{

@@ -12,7 +12,7 @@ namespace kumasuzu.Droid
 
 		public PlatformSoundPlayer()
 		{
-			mediaPlayer = MediaPlayer.Create(global::Android.App.Application.Context, Resource.Raw.sei_ge_suzu02);
+			mediaPlayer = MediaPlayer.Create(global::Android.App.Application.Context, Resource.Raw.suzu);
 		}
 
 		public void playSound()
