@@ -6,6 +6,8 @@ namespace kumasuzu
 {
 	public class Timer : CancellationTokenSource, IDisposable
 	{
+		private static int period;
+
 		/// <summary>
 		/// コンストラクタ
 		/// </summary>
@@ -16,6 +18,8 @@ namespace kumasuzu
 		/// <param name="cts">CancellationTokenSourceオブジェクト</param>
 		public Timer(Action<Object> action, object state, int dueTime, int period, CancellationTokenSource cts)
 		{
+			Timer.period = period;
+
 			Task.Delay(dueTime, cts.Token).ContinueWith(
 				async (t, s) =>
 				{
@@ -24,7 +28,7 @@ namespace kumasuzu
 					while (!cts.IsCancellationRequested)
 					{
 						await Task.Run(() => tuple.Item1(tuple.Item2), cts.Token);
-						await Task.Delay(period);
+						await Task.Delay(Timer.period);
 					}
 				},
 				Tuple.Create(action, state),
@@ -32,6 +36,11 @@ namespace kumasuzu
 				TaskContinuationOptions.ExecuteSynchronously | TaskContinuationOptions.OnlyOnRanToCompletion,
 				TaskScheduler.Default
 			);
+		}
+
+		public void changePeriod(int period)
+		{
+			Timer.period = period;
 		}
 
 		public new void Dispose() { base.Cancel(); }
