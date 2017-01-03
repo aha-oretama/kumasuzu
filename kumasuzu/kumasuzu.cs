@@ -12,7 +12,7 @@ namespace kumasuzu
 		private static string START_IMAGE_PATH = "kumasuzu.images.kumasuzu_startButton.png";
 		private static string STOP_IMAGE_PATH = "kumasuzu.images.kumasuzu_stopButton.png";
 
-		private static int DEFAULT_INTERVAL = 5;
+		private static int DEFAULT_DISPLAY_INTERVAL = 5;
 
 		private double STEP_VALUE = 1.0;
 
@@ -35,7 +35,7 @@ namespace kumasuzu
 			// Labelを生成する
 			var label = new Label
 			{
-				Text = DEFAULT_INTERVAL.ToString(),
+				Text = DEFAULT_DISPLAY_INTERVAL.ToString(),
 				HorizontalOptions = LayoutOptions.Center,//中央に配置する（横方向）
 			};
 
@@ -43,22 +43,34 @@ namespace kumasuzu
 			var slider = new Slider
 			{
 				WidthRequest = 300, // サイズ
-				Value = DEFAULT_INTERVAL, // デフォルト
 				Minimum = 0.0, // 最小値
-				Maximum = 60.0, // 最大値
+				Maximum = 10.0, // 最大値
+				Value = (double)SliderUtils.convertToValue(DEFAULT_DISPLAY_INTERVAL), // デフォルト
 				HorizontalOptions = LayoutOptions.Center,//中央に配置する（横方向）
 			};
+
 			// スライダーの値が変化したときのイベント処理
 			slider.ValueChanged += (s, e) =>
 			{
+				// スライダーは整数値のみ
 				var newStep = (int)(Math.Round(e.NewValue / STEP_VALUE));
 				slider.Value = newStep * STEP_VALUE;
 
 				// ラベルに変化した値を表示する
-				label.Text = newStep.ToString();
-				if (timer != null)
+				var displayStep = SliderUtils.convertToDisplay(newStep);
+				label.Text = displayStep.ToString();
+
+				// スライダーの変化い合わせて、再生時間を調整
+				if (started)
 				{
-					timer.changePeriod(newStep);
+					cancelTokenSource.Cancel();
+
+					cancelTokenSource = new CancellationTokenSource();
+					timer = new Timer((obj) => soundPlayer.playSound(),
+									  null,
+									  (int)(displayStep * 1000),
+									  (int)(displayStep * 1000),
+									  cancelTokenSource);
 				}
 			};
 
@@ -74,7 +86,7 @@ namespace kumasuzu
 					timer = new Timer((obj) => soundPlayer.playSound(),
 					                  null,
 									  0,
-					                  (int)(slider.Value * 1000),
+					                  (int)(SliderUtils.convertToDisplay(slider.Value) * 1000),
 									  cancelTokenSource);
 
 					image.Opacity = 0.5;
