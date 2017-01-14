@@ -32,11 +32,17 @@ namespace kumasuzu
 				Source = ImageSource.FromResource(START_IMAGE_PATH)
 			};
 
+			var titleLabel = new Label
+			{
+				Text = "鈴の音の間隔",
+				HorizontalOptions = LayoutOptions.Center //中央に配置する（横方向）
+			};
+
 			// Labelを生成する
 			var label = new Label
 			{
 				Text = DEFAULT_DISPLAY_INTERVAL.ToString(),
-				HorizontalOptions = LayoutOptions.Center,//中央に配置する（横方向）
+				HorizontalOptions = LayoutOptions.Center //中央に配置する（横方向）
 			};
 
 			// スライダー
@@ -113,6 +119,7 @@ namespace kumasuzu
 				{
 					VerticalOptions = LayoutOptions.Center,
 					Children = {
+						titleLabel,
 						label,
 						slider,
 						image
